@@ -1,0 +1,20 @@
+@model Livro
+
+<div class="row justify-content-md-center">
+    <form asp-action="Cadastro" method="POST" class="col-md-4">
+        <input type="hidden" asp-for="Id" />
+        <div class="form-group">
+            <label class="txt" asp-for="Titulo">Titulo</label>
+            <input asp-for="Titulo" class="form-control" required/>
+        </div>
+        <div class="form-group">
+            <label class="txt" asp-for="Autor">Ator</label>
+            <input asp-for="Autor" class="form-control" required/>
+        </div>
+        <div>
+            <label class="txt" asp-for="Ano">Ano</label>
+            <input asp-for="Ano" required/>
+        </div>
+        <input type="submit" value="Salvar" class="btn btn-primary" required/>
+    </form>
+</div>

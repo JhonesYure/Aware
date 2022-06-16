@@ -1,0 +1,11 @@
+@model Usuario
+
+<h1>Alerta</h1>
+<h2>Tem certeza que deseja escluir o Usuario ?</h2>
+
+
+<form asp-action="Excluir" method="post">
+    <input type="hidden" asp-for="ID">
+    <input name="decisao" type="submit" value="Cancelar">
+    <input name="decisao" type="submit" value="EXCLUIR" >
+</form>
