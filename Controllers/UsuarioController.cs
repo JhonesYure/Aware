@@ -28,6 +28,7 @@ namespace Aware.Controllers
         //LISTA
         public IActionResult Listagem()
         {
+            //AUTENTICAÇÃO//
             return View(new UsuarioService().Listar());
         }
         //EDITAR
@@ -60,6 +61,7 @@ namespace Aware.Controllers
          //ADMIN
         public IActionResult NeedAdmin()
         {
+            //AUTENTICAÇÃO//
             return View();
         }
         //LOGOUT
