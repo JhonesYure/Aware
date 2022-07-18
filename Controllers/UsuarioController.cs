@@ -29,6 +29,9 @@ namespace Aware.Controllers
         public IActionResult Listagem()
         {
             //AUTENTICAÇÃO//
+            Autenticacao.CheckLogin(this);
+            Autenticacao.verificaUsuarioAdmin(this);
+
             return View(new UsuarioService().Listar());
         }
         //EDITAR
@@ -62,6 +65,8 @@ namespace Aware.Controllers
         public IActionResult NeedAdmin()
         {
             //AUTENTICAÇÃO//
+            Autenticacao.CheckLogin(this);
+            Autenticacao.verificaUsuarioAdmin(this);
             return View();
         }
         //LOGOUT

@@ -50,7 +50,7 @@ namespace Aware.Controllers
                 Usuario admin = new Usuario();
                 admin.Nome  = "Administrador";
                 admin.Login = "admin";
-                admin.Senha = ("123");
+                admin.Senha = Criptografia.txtcripto("123");
                 admin.Tipo = Usuario.ADMIN;
 
                 ac.Usuarios.Add(admin);

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Aware.Models;
+using Microsoft.AspNetCore.Http;
 
 namespace Aware.Controllers
 {
@@ -20,13 +21,27 @@ namespace Aware.Controllers
 
         public IActionResult Index()
         {
+            //Autenticacao.CheckLogin(this);//
+            ViewData["mensagem"] = "Bem vindo a Aware";
             return View();
         }
         public IActionResult Login()
         {
             return View();
         }
-        
+        [HttpPost]
+        public IActionResult Login(string login, string senha)
+        {
+            if (Autenticacao.VerificaLoginSenha(login,senha,this))
+            {
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                ViewData["ERRO"] ="Senha ou login incorretos";
+                return View();
+            }
+        }
         public IActionResult Privacy()
         {
             return View();

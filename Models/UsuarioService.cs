@@ -28,6 +28,7 @@ namespace Aware.Models
         {
             using(AwareContext ac = new AwareContext())
             {
+                novoUser.Senha = Criptografia.txtcripto(novoUser.Senha);
                 ac.Usuarios.Add(novoUser);
                 ac.SaveChanges();
             }
@@ -41,7 +42,7 @@ namespace Aware.Models
                 u.Nome = editaUser.Nome;
                 u.Login = editaUser.Login;
                 u.Email = editaUser.Email;
-                u.Senha = editaUser.Senha;
+                u.Senha = Criptografia.txtcripto(editaUser.Senha);
                 u.Tipo = editaUser.Tipo;
 
                 ac.SaveChanges();
