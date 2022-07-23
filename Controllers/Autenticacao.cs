@@ -1,10 +1,12 @@
-using System.Collections.Generic;
 using System;
-using Biblioteca.Models;
+using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
-using Microsoft.AspNetCore.Http;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-
+using Microsoft.Extensions.Logging;
+using Biblioteca.Models;
+using Microsoft.AspNetCore.Http;
 
 namespace Biblioteca.Controllers
 {

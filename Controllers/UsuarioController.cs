@@ -15,22 +15,22 @@ namespace Biblioteca.Controllers
         //INSERIR
         public IActionResult Cadastro()
         {
-            Autenticacao.CheckLogin(this);
-            Autenticacao.verificarUsuarioAdmin(this);
+            /*Autenticacao.CheckLogin(this);
+            Autenticacao.verificarUsuarioAdmin(this);*/
 
             return View();
         }
         [HttpPost]
         public IActionResult Cadastro(Usuario novoUsuario)
         {
-           Autenticacao.CheckLogin(this);
-           Autenticacao.verificarUsuarioAdmin(this);
+           /*Autenticacao.CheckLogin(this);
+           Autenticacao.verificarUsuarioAdmin(this);*/
 
             UsuarioService us = new UsuarioService();
             us.Inserir(novoUsuario);
             ViewData["mensagem"] = "Cadastro realizado!";
 
-           return View();
+           return RedirectToAction("login","Home");
         }
         //LISTA
         public IActionResult Listagem()
@@ -44,7 +44,7 @@ namespace Biblioteca.Controllers
         public IActionResult Editar(int id)
         {
             Autenticacao.CheckLogin(this);
-            Autenticacao.verificarUsuarioAdmin(this);
+            /*Autenticacao.verificarUsuarioAdmin(this);*/
             
             return View();
         }
@@ -52,17 +52,19 @@ namespace Biblioteca.Controllers
         public IActionResult Editar(Usuario usuario)
         {
             Autenticacao.CheckLogin(this);
-            Autenticacao.verificarUsuarioAdmin(this);
+            /*Autenticacao.verificarUsuarioAdmin(this);*/
+            
 
             UsuarioService us = new UsuarioService();
             us.EditarUsuario(usuario);
-            return RedirectToAction("Listagem");
+            return RedirectToAction("index","Home");
         }
         //EXCLUIR
         public IActionResult Excluir(int id)
         {
             Autenticacao.CheckLogin(this);
-            Autenticacao.verificarUsuarioAdmin(this);
+            /*Autenticacao.verificarUsuarioAdmin(this);*/
+            
 
             UsuarioService us = new UsuarioService();
             Usuario UsuarioEncontrado = us.BuscarId(id);
@@ -73,7 +75,8 @@ namespace Biblioteca.Controllers
         public IActionResult Excluir(string decisao,Usuario u)
         {
             Autenticacao.CheckLogin(this);
-            Autenticacao.verificarUsuarioAdmin(this);
+            /*Autenticacao.verificarUsuarioAdmin(this);*/
+            
 
             UsuarioService us = new UsuarioService();
             
@@ -81,12 +84,12 @@ namespace Biblioteca.Controllers
             {
                 ViewData["mensagem"] = "Exclusão do usuário realizada com sucesso";
                 us.Excluir(u.ID);
-                return RedirectToAction("Listagem");
+                return RedirectToAction("index","Home");
             }
             else
             {
                 ViewData["mensagem"] = "Exclusão cancelada";
-                return RedirectToAction("Listagem");
+                return RedirectToAction("index","Home");
             }
         }
         //CADASTRO

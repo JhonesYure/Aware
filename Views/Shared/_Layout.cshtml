@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Biblioteca</title>
+    <title>@ViewData["Title"] - Aware</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
@@ -12,57 +12,32 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Biblioteca</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Aware</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-controller="Usuario" asp-action="Cadastro">Cadastro</a>
+                        </li>
 
                         @if(Context.Session.GetString("login")==null)
                         {
-                        <li class="nav-item dropdown">
-                            <a class="nav-link text-light dropdown-toggle" data-toggle="dropdown" href="#">Livros</a>
-                            <div class="dropdown-menu" aria-labelledby="menuLivros">
-                               
-                            </div>
-                        </li>                      
-                       
-                        <li class="nav-item dropdown">
-                            <a class="nav-link text-light dropdown-toggle" data-toggle="dropdown" href="#">Emprestimo</a>
-                            <div class="dropdown-menu" aria-labelledby="menuLivros">
-                               
-                            </div>
-                        </li>
-                        
-                  
+                           
                         } else
                         {
-                            <li class="nav-item dropdown">
-                            <a class="nav-link text-light dropdown-toggle" data-toggle="dropdown" href="#">Livros</a>
-                            <div class="dropdown-menu" aria-labelledby="menuLivros">
-                                <a class="dropdown-item" href="/Livro/Cadastro">Cadastro</a>
-                                <a class="dropdown-item" href="/Livro/Listagem">Listagem</a>
-                            </div>
-                        </li>
 
                             <li class="nav-item dropdown">
-                            <a class="nav-link text-light dropdown-toggle" data-toggle="dropdown" href="#">Usuário</a>
+                            <a class="nav-link text-light dropdown-toggle" data-toggle="dropdown" href="#">Serviços</a>
                             <div class="dropdown-menu" aria-labelledby="menuLivros">
-                                <a class="dropdown-item" href="/Usuario/Cadastro">Cadastro</a>
                                 <a class="dropdown-item" href="/Usuario/Listagem">Listagem</a>
+                                <a class="dropdown-item" href="/Usuario/Editar">Editar Conta</a>
+                                <a class="dropdown-item" href="/Usuario/Excluir">Deletar Conta</a>
+                                
                             </div>
-                        </li>                    
-                       
-                        <li class="nav-item dropdown">
-                            <a class="nav-link text-light dropdown-toggle" data-toggle="dropdown" href="#">Emprestimo</a>
-                            <div class="dropdown-menu" aria-labelledby="menuLivros">
-                                <a class="dropdown-item" href="/Emprestimo/Listagem">Listagem</a>
-                                <a class="dropdown-item" href="/Emprestimo/Cadastro">Cadastro</a>
-                            </div>
-                        </li>
-
+                        </li>                   
                          
                         <li class="nav-item">
                             <a class="nav-link text-light" asp-controller="Usuario" asp-action="Sair">Sair</a>

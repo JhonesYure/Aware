@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "p5v+2QhEkCQG4jGzdluMX/XSqIENl62AYECOEjRAZj0hHxTdB6Nm8+scbgrHfMhHIJtbXT0kM2lqbGeVs0U8EA==",
+  "dgSpecHash": "Lpcs4kQIGGnk5yNgpFkwk1U3lJTfvJnVLEnk2STUlZ6tHwhlL9CU2LOelVCJsIOl9WRMVF2dTWYAoSHKC8K1qQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Jhones\\OneDrive\\SENAC\\UC07\\Biblioteca\\Biblioteca.csproj",
+  "projectFilePath": "C:\\Users\\Jhones\\Desktop\\Projetos Paralelos\\Aware\\Biblioteca.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Jhones\\.nuget\\packages\\microsoft.csharp\\4.6.0\\microsoft.csharp.4.6.0.nupkg.sha512",
     "C:\\Users\\Jhones\\.nuget\\packages\\microsoft.entityframeworkcore\\3.0.0\\microsoft.entityframeworkcore.3.0.0.nupkg.sha512",
@@ -28,7 +28,8 @@
     "C:\\Users\\Jhones\\.nuget\\packages\\system.collections.immutable\\1.6.0\\system.collections.immutable.1.6.0.nupkg.sha512",
     "C:\\Users\\Jhones\\.nuget\\packages\\system.componentmodel.annotations\\4.6.0\\system.componentmodel.annotations.4.6.0.nupkg.sha512",
     "C:\\Users\\Jhones\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.6.0\\system.diagnostics.diagnosticsource.4.6.0.nupkg.sha512",
-    "C:\\Users\\Jhones\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.2\\system.threading.tasks.extensions.4.5.2.nupkg.sha512"
+    "C:\\Users\\Jhones\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.2\\system.threading.tasks.extensions.4.5.2.nupkg.sha512",
+    "C:\\Users\\Jhones\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.26\\microsoft.netcore.app.host.win-x64.3.1.26.nupkg.sha512"
   ],
   "logs": []
 }

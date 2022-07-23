@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -22,7 +22,7 @@ namespace Biblioteca.Controllers
         public IActionResult Index()
         {
             Autenticacao.CheckLogin(this);
-            ViewData["mensagem"] = "Seja bem vindo ao sistema de controle de empréstimo de livros";
+            ViewData["mensagem"] = "Seja bem vindo";
             return View();
         }
 
