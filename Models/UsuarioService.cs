@@ -45,7 +45,8 @@ namespace Biblioteca.Models
                     Usuario u = bc.Usuarios.Find(editaUsuario.ID);
                     u.Nome = editaUsuario.Nome;
                     u.Login = editaUsuario.Login;
-                    u.Senha = Criptografia.txtcripto(editaUsuario.Senha);
+                    u.Email = editaUsuario.Email;
+                    u.Senha = Criptografia.txtcripto("senha");
                     u.Tipo = editaUsuario.Tipo;
 
                     bc.SaveChanges();

@@ -45,15 +45,17 @@ namespace Biblioteca.Controllers
         {
             Autenticacao.CheckLogin(this);
             /*Autenticacao.verificarUsuarioAdmin(this);*/
+            UsuarioService us = new UsuarioService();
+            Usuario user = us.BuscarId(id);
             
-            return View();
+            return View(user);
         }
         [HttpPost]
         public IActionResult Editar(Usuario usuario)
         {
             Autenticacao.CheckLogin(this);
             /*Autenticacao.verificarUsuarioAdmin(this);*/
-            
+           
 
             UsuarioService us = new UsuarioService();
             us.EditarUsuario(usuario);
